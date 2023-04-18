@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">A M S</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" style="color: white; font-weight: 600;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user-login" style="color: white; font-weight: 600;">User</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            style="background: #109e99;">
+            <div class="featured-image mb-3">
+                <img src="./assets/images/adminreg.jpg" class="img-fluid" style="width: 350px;">
+            </div>
+            <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">
+            </p>
+            <!--<large class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Welcome to Our Application.</large>-->
+        </div>
+
+        <div class="col-md-6 right-box">
+            <div class="align-items-center">
+                <div class="header-text mb-4">
+                    <h2>New Admin</h2>
+                    <p></p>
+                </div>
+                <form id="adminform" #adminform="ngForm" (ngSubmit)="onSubmit(adminform)">
+
+                    <div class= "form-group mb-2">
+                        
+                        <input #userName="ngModel" [(ngModel)]="admindetails.userName" name="userName" type="text" class="form-control" id="userName" name="userName" placeholder="User Name"
+                            required pattern="[A-Za-z]{3,10}[0-9]{3}" title="minimum 3 to 8 characters and 3 digits">
+                    </div>
+                    <div class="form-group mb-2">
+                        
+                        <input #email="ngModel" [(ngModel)]="admindetails.email" name="email" type="email" class="form-control" id="email" name="email" placeholder="Email-address"
+                            maxlength="20" required>
+                    </div>
+                    <div class="form-group mb-2">
+                      
+                        <input #phone="ngModel" [(ngModel)]="admindetails.phone" name="phone" type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required
+                            pattern="[7-9][0-9]{9}">
+                    </div>
+                    <div class="form-group mb-2">
+                      
+                        <input #password="ngModel" [(ngModel)]="admindetails.password" name="password" type="password" class="form-control" id="password" name="password" placeholder="Password"
+                            required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="formCheck">
+                        <label for="formCheck" class="form-check-label text-secondary"><small>Remember
+                                Me</small></label>
+                    </div>
+
+                    <div class="loginbox mt-2 text-center">
+                        <input type="submit" name="" value="Register">
+
+                    </div>
+                    <div class="mt-2 text-center">
+                        <small>Already have an account? <a routerLink="/admin-login">Log in</a></small>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>Account Mangement System  &copy; 2023</footer>
+

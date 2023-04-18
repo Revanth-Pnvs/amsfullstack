@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">A M S</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" style="color: white; font-weight: 600;">Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-login" style="color: white; font-weight: 600;">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<!--Forgot Page-->
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100 min-vw-100 ">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area carddata">
+    <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #2b7a78;">
+        <div class="featured-image mb-3">
+         <img src="./assets/images/fpass.jpg" class="img-fluid" style="width:320px;">
+        </div>
+        <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 500;"></p>
+       <!--<large class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Please Reset Here..</large>-->
+    </div> 
+   
+    <div class="col-md-6 right-box">
+       <div class="row align-items-center pass">
+             <div class="header-text mb-4">
+                  <h2> Reset your Password</h2>
+                  
+             </div>
+             
+             <div class="input-group mb-3">
+                 <input type="password" class="form-control form-control-lg bg-light fs-6"  pattern="(?=.*[@#$&]).{8,}" title="Password must contain atleast   special characters [@#$&] and be at least 8 characters long" required name="" placeholder="New Password">
+             </div>
+             
+             <div class="input-group mb-1">
+                 <input type="password" class="form-control form-control-lg bg-light fs-6"  pattern="(?=.*[@#$&]).{8,}" title="Password must contain atleast   special characters [@#$&] and be at least 8 characters long"  required name="" placeholder="Confirm Password">
+             </div>
+             
+             <div class="input-group mb-4 d-flex justify-content-between">
+                 
+             </div>
+             
+             <div class="loginbox">
+                 <input type="submit"  value="Submit">
+
+             </div>          
+       </div>
+    </div> 
+
+   </div>
+ </div>
+
+ <footer>AccountMangement App &copy; 2023</footer>
+
+

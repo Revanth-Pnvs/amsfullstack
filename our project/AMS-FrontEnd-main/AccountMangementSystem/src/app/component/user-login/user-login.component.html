@@ -1,0 +1,101 @@
+<!--User Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">A M S</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" style="color: white; font-weight: 600;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin-login" style="color: white; font-weight: 600;">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Login Page-->
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            style="background: #109e99;">
+            <div class="featured-image mb-3">
+                <img src="./assets/images/userlog.jpg" class="img-fluid" style="width: 300px;">
+            </div>
+            <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">User
+                Login</p>
+            <!--<large class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Welcome to Our Application.</large>-->
+        </div>
+
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2> Hello, There</h2>
+                    <p>We are Happy to see you back.</p>
+                </div>
+                <form id="loginForm" #loginform="ngForm" (ngSubmit)="OnSubmit(loginform)">
+
+                    <div class="col mt-2">
+                        
+                        <input #email="ngModel" [(ngModel)]="userdetails.email" name="email" class="form-control"
+                            type="email" id="email" placeholder="Email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+
+                    </div>
+                    <div class="text-danger" *ngIf="email.dirty && email.errors?.['required']">
+                        Email is required
+                    </div>
+                    <div class="text-danger" *ngIf="email.dirty && email.errors?.['pattern']">
+                        Enter an valid email
+                    </div>
+                    
+                    <div class="col mt-2">
+                        
+                        <input #password="ngModel" [(ngModel)]="userdetails.password" name="password" class="form-control"
+                            type="password" id="password" placeholder="Enter password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*\d)[A-Za-z\d!@#$%^&*]{6,15}$" >
+
+                    </div>
+                    <div class="text-danger" *ngIf="password.dirty && password.errors?.['required']">
+                        Password is required
+                    </div>
+                    <div class="text-danger" *ngIf="password.dirty && password.errors?.['pattern']">
+                       Enter valid password
+                    </div>
+            
+                    <div class="input-group mb-5 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Remember
+                                    Me</small></label>
+                        </div>
+                        <div class="forgot">
+                            <small><a routerLink="/forgot">Forgot Password?</a></small>
+                        </div>
+                    </div>
+
+                    <div class="loginbox">
+                        <input type="submit" name="" value="LogIn">
+
+                    </div>
+                </form>
+
+                <!--<div class="input-group mb-3">
+                 <button class="btn btn-lg btn-light w-100 fs-6"><img src="./assets/images/google.png" style="width:20px" class="me-2"><a>Sign In with Google</a><small></small></button>
+             </div>-->
+                <div class="row mt-3">
+                    <small>Don't have account? <a routerLink="/userregister">Create Account</a></small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>Account Mangement System  &copy; 2023</footer>
+
+  

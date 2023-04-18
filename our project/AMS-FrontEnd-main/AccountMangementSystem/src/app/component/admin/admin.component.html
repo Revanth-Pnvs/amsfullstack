@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">AccountMangementSystem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!--<li class="nav-item">
+              <a class="nav-link" routerLink="/" style="color: white;">Home</a>
+          </li>-->
+
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" style="color: white; font-weight: 600;">Accepted Accounts</a>
+        </li>
+
+      </ul>
+      <span>
+
+      </span>
+      <span>
+        <a routerLink="/" style="color: white;"><i class="fa-solid fa-arrow-right-from-bracket"
+            style="color: #ffffff;"></i> Logout</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!--<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+      <th scope="col">dateOfBirth</th>
+      <th scope="col">city</th>
+      <th scope="col">state</th>
+      <th scope="col">phone</th>
+      
+
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr *ngFor="let c of userdetails" >
+      <td scope="row">{{c.firstName}}</td>
+      <td scope="row">{{c.lastName}}</td>
+      <td scope="row">{{c.email}}</td>
+      <td scope="row">{{c.address}}</td>
+      <td scope="row">{{c.dateOfBirth}}</td>
+      <td scope="row">{{c.city}}</td>
+      <td scope="row">{{c.state}}</td>
+      <td scope="row">{{c.phone}}</td>
+    </tr>
+  </tbody>
+</table>-->
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-10 offset-1">
+      <table class="table table-success"  style="font-style: italic;">
+        <thead>
+          <tr>
+            <th>AccountNumber</th>
+            <th>IFSC Code</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>DateOfBirth</th>
+            <th>Phone</th>
+            <th>Status</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of userdetails">
+            <td>{{c.accountnumber}}</td>
+            <td>{{c.ifsc}}</td>
+            <td>{{c.firstName}}</td>
+            <td>{{c.lastName}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.address}}</td>
+            <td>{{c.dateOfBirth}}</td>
+            <td>{{c.phone}}</td>
+
+
+            <td>
+              <button class="form-control btn">
+
+                <i class="fa-solid fa-check fa-xl" style="color: #09a228;"></i>
+
+              </button>
+              <hr>
+              <!-- <button>
+
+                <i class="fa-solid fa-times fa-fade fa-lg" style="color: #f06305;"></i>Pending
+
+              </button> -->
+
+              <button class="form-control btn " (click)="deleteUser(c.accountnumber)">
+                <i class="fa-solid fa-trash fa-xl"style="color: #f00505;"></i>
+                
+              </button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+       
+  </div>
+</div>
+
+
+
+
+<footer>AccountMangement App &copy; 2023</footer>

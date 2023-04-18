@@ -1,0 +1,43 @@
+.container {
+  margin-top: 50px;
+  padding: 50px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 350px;
+ 
+}
+h3
+{
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+.btn{
+  background: #109e99;
+}
+.ag{
+  text-align: center;
+}
+footer{
+  width:100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: rgb(119, 122, 125);
+  bottom: 0;
+  position: fixed;
+}
+.form-control.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+
+.form-control.ng-touched.ng-valid{
+
+  border: 2px solid green;
+}

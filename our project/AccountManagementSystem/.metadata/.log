@@ -1,0 +1,242 @@
+!SESSION 2023-04-17 20:23:08.456 -----------------------------------------------
+eclipse.buildId=4.17.2.202301310704
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-04-17 20:23:10.520
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.springframework.ide.eclipse.boot.dash.cf 4 0 2023-04-17 20:23:11.105
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash.cf [549]
+  Unresolved requirement: Require-Bundle: org.springsource.ide.eclipse.commons.cloudfoundry.client.v2
+    -> Bundle-SymbolicName: org.springsource.ide.eclipse.commons.cloudfoundry.client.v2; bundle-version="4.17.2.202301310704"
+       org.springsource.ide.eclipse.commons.cloudfoundry.client.v2 [571]
+         No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.springframework.tooling.cloudfoundry.manifest.ls
+    -> Bundle-SymbolicName: org.springframework.tooling.cloudfoundry.manifest.ls; bundle-version="1.44.0.202301310652"; singleton:="true"
+       org.springframework.tooling.cloudfoundry.manifest.ls [565]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"] because it is exposed to package 'org.bouncycastle.asn1' from resources org.bouncycastle.bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcprov"] and bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0"; osgi.identity="bcprov"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.bouncycastle.bcprov)(bundle-version>=1.59.0))
+     |
+    provide: osgi.wiring.bundle: org.bouncycastle.bcprov
+  org.bouncycastle.bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcprov"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.bouncycastle.bcpkix)(bundle-version>=1.59.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="1.72.0.v20221013-1810"; osgi.wiring.bundle="org.bouncycastle.bcpkix"
+  org.bouncycastle.bcpkix [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcpkix"]
+    import: (&(osgi.wiring.package=org.bouncycastle.asn1)(&(version>=1.72.0)(!(version>=1.73.0))))
+     |
+    export: osgi.wiring.package: org.bouncycastle.asn1
+  bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0"; osgi.identity="bcprov"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY ch.qos.logback.classic 1 0 2023-04-17 20:23:36.098
+!MESSAGE Logback config file: C:\Users\revanth\OneDrive\Desktop\our project\AccountManagementSystem\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.0.20221015-0744.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-04-17 20:23:40.071
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-17 20:23:40.071
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-17 20:23:40.071
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2023-04-17 20:23:42.456
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-04-17 20:23:43.177
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\revanth'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2023-04-17 20:23:43.421
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.xml.namespaces, page: org.springframework.ide.eclipse.beans.ui.namespaces.preferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-17 20:23:43.423
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.boot, page: org.springframework.ide.eclipse.boot.ui.preferences.BootPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-17 20:23:43.424
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springsource.ide.eclipse.dashboard.ui, page: com.springsource.sts.ide.ui.preferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-17 20:23:43.427
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.boot.dash, page: org.springframework.ide.eclipse.boot.dash.ngrok.NGROKInstallPreferencePage)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2023-04-17 20:23:46.077
+!MESSAGE May have failed to replace token 		//window.ide 'dummy'. Replaced/injected later by STS browser integration.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2023-04-17 20:23:46.078
+!MESSAGE May have failed to replace token 		//The dummy helps preview/test the page in an external browser.
+!SESSION 2023-04-18 12:37:50.562 -----------------------------------------------
+eclipse.buildId=4.17.2.202301310704
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-04-18 12:37:51.697
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.springframework.ide.eclipse.boot.dash.cf 4 0 2023-04-18 12:37:52.010
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash.cf [549]
+  Unresolved requirement: Require-Bundle: org.springframework.tooling.cloudfoundry.manifest.ls
+    -> Bundle-SymbolicName: org.springframework.tooling.cloudfoundry.manifest.ls; bundle-version="1.44.0.202301310652"; singleton:="true"
+       org.springframework.tooling.cloudfoundry.manifest.ls [565]
+         No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.springsource.ide.eclipse.commons.cloudfoundry.client.v2
+    -> Bundle-SymbolicName: org.springsource.ide.eclipse.commons.cloudfoundry.client.v2; bundle-version="4.17.2.202301310704"
+       org.springsource.ide.eclipse.commons.cloudfoundry.client.v2 [571]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"] because it is exposed to package 'org.bouncycastle.asn1' from resources org.bouncycastle.bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcprov"] and bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0"; osgi.identity="bcprov"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.bouncycastle.bcprov)(bundle-version>=1.59.0))
+     |
+    provide: osgi.wiring.bundle: org.bouncycastle.bcprov
+  org.bouncycastle.bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcprov"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash.cf [osgi.identity; type="osgi.bundle"; version:Version="4.17.2.202301310704"; osgi.identity="org.springframework.ide.eclipse.boot.dash.cf"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.bouncycastle.bcpkix)(bundle-version>=1.59.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="1.72.0.v20221013-1810"; osgi.wiring.bundle="org.bouncycastle.bcpkix"
+  org.bouncycastle.bcpkix [osgi.identity; type="osgi.bundle"; version:Version="1.72.0.v20221013-1810"; osgi.identity="org.bouncycastle.bcpkix"]
+    import: (&(osgi.wiring.package=org.bouncycastle.asn1)(&(version>=1.72.0)(!(version>=1.73.0))))
+     |
+    export: osgi.wiring.package: org.bouncycastle.asn1
+  bcprov [osgi.identity; type="osgi.bundle"; version:Version="1.72.0"; osgi.identity="bcprov"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY ch.qos.logback.classic 1 0 2023-04-18 12:38:10.840
+!MESSAGE Logback config file: C:\Users\revanth\OneDrive\Desktop\our project\AccountManagementSystem\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.0.20221015-0744.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-04-18 12:38:13.931
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-18 12:38:13.931
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-18 12:38:13.931
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2023-04-18 12:38:16.387
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-04-18 12:38:17.039
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\revanth'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2023-04-18 12:38:17.241
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.xml.namespaces, page: org.springframework.ide.eclipse.beans.ui.namespaces.preferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-18 12:38:17.244
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.boot, page: org.springframework.ide.eclipse.boot.ui.preferences.BootPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-18 12:38:17.245
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springsource.ide.eclipse.dashboard.ui, page: com.springsource.sts.ide.ui.preferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2023-04-18 12:38:17.247
+!MESSAGE Invalid preference category path: org.springsource.ide.eclipse.commons.preferencePage (bundle: org.springframework.ide.eclipse.boot.dash, page: org.springframework.ide.eclipse.boot.dash.ngrok.NGROKInstallPreferencePage)
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2023-04-18 12:38:17.463
+!MESSAGE May have failed to replace token 		//window.ide 'dummy'. Replaced/injected later by STS browser integration.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2023-04-18 12:38:17.465
+!MESSAGE May have failed to replace token 		//The dummy helps preview/test the page in an external browser.

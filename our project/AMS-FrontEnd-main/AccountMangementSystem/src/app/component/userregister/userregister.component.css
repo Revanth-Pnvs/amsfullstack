@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.form-control.ngtouched.ng-invalid{
+    border: 2px solid red;
+}
+
+.container{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;   
+}
+.text input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #109e99;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 200px;
+    margin-top: 20px;
+    text-align: center;
+}
+.text input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #b71414;
+    color: #000;    
+}
+
+
+
+footer{
+    width:100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(119, 122, 125);
+    bottom: 0;
+    position: fixed;
+  }
+
+  .form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+
+  .form-control.ng-touched.ng-valid{
+
+    border: 2px solid green;
+  }

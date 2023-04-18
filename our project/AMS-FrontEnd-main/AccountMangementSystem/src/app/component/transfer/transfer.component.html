@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">A M S</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" style="color: white; font-weight: 600;">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transctions" style="color: white; font-weight: 600;">My Transctions</a>
+        </li>
+
+      </ul>
+      <span>
+
+      </span>
+      <span>
+        <a routerLink="/" style="color: white;"><i class="fa-solid fa-arrow-right-from-bracket"
+            style="color: #ffffff;"></i> Logout</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!--This is Transfer Money-->
+<div class="container">
+  <h3>Transfer Money</h3>
+  <form class="body" #transferform="ngForm" (ngSubmit)="OnSubmit(transferform)" id="form">
+    <div class="form-group ag">
+      <label for="from-account">From Account:</label>
+      <input #fromAccount="ngModel" [(ngModel)]="transferdetails.fromAccount" name="fromAccount" type="text"
+        class="form-control" id="from-account" name="fromAccount" placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
+    </div>
+
+    <div class="form-group ag">
+      <label for="to-account">To Account:</label>
+      <input #toAccount="ngModel" [(ngModel)]="transferdetails.toAccount" type="text" class="form-control"
+        id="to-account" name="toAccount" placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
+    </div>
+    <div class="form-group">
+      <label for="pin">Account Pin</label>
+      <input #pin="ngModel" [(ngModel)]="transferdetails.pin" type="text" class="form-control" id="pin" name="pin"
+        placeholder="XXX-XXX" required title="Enter your 6 digits pin" pattern="[0-9]{6}">
+    </div>
+    <div class="form-group ag">
+      <label for="amount">Amount:</label>
+      <input #amount="ngModel" [(ngModel)]="transferdetails.amount" type="text" class="form-control" id="amount"
+        name="amount" placeholder="Enter Amount to be transfer" title="Amount should be less than or equal to 99999"
+        required pattern="[0-9]{5}">
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Transfer Money</button>
+    </div>
+    <div class="mt-3 text-start">
+      <a routerLink="/user"><i class="fa-solid fa-arrow-left fa-xl"></i></a>
+    </div>
+  </form>
+
+</div>
+
+
+
+<footer>Account Mangement System &copy; 2023</footer>

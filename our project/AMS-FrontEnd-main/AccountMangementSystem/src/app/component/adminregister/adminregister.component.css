@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+}
+
+.box-area{
+    width: 930px;
+}
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+h2{
+    font-style: italic;
+}
+p{
+    font-style:italic ;
+}
+h2{
+    text-align: center;
+}
+row{
+    text-align: center;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #109e99;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 280px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #b71414;
+    color: #000;    
+}
+
+footer{
+    width:100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(119, 122, 125);
+    bottom: 0;
+    position: fixed;
+  }
+
+  .form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+
+  .form-control.ng-touched.ng-valid{
+
+    border: 2px solid green;
+  }
