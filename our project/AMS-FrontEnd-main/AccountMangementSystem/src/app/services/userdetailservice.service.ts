@@ -25,5 +25,9 @@ export class UserdetailserviceService {
   deleteUser(accountnumber: any) {
     return this.http.delete(`http://localhost:8028/allusers/${accountnumber}`);
   }
+   //Jwt
+   verifyUser(userdetails:any){
+    return this.http.post('http://localhost:8028/login',userdetails,{responseType:'text'});
+  }
   
 }

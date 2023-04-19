@@ -165,8 +165,8 @@
     <hr>
     <h2><i class="fas fa-coins"></i> Deposit Details:</h2>
     <div class="row" *ngFor="let deposit of depositdetails">
-      <div class="col-2"><strong>From Account:</strong> {{deposit.fromAccount}}</div>
-      <div class="col-2"><strong>To Account:</strong> {{deposit.toAccount}}</div>
+      <div class="col-2"><strong>Account:</strong> {{deposit.fromAccount}}</div>
+      <!-- <div class="col-2"><strong>To Account:</strong> {{deposit.toAccount}}</div> -->
       <div class="col-2"><strong>Amount:</strong> {{deposit.amount}}</div>
       <!-- <div class="col-3"><strong>Balance:</strong></div> -->
       <div class="col-3"><b>Date :</b> {{today | date:'medium'}}</div>

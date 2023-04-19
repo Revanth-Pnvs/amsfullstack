@@ -1,34 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDetails } from 'src/app/models/userdetails';
 import { UserdetailserviceService } from 'src/app/services/userdetailservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit{
+export class AdminComponent implements OnInit {
 
-  constructor(private service:UserdetailserviceService){
-    
+  constructor(private service: UserdetailserviceService) {
+
   }
-  public userdetails:any;
+  public userdetails: any;
 
 
   ngOnInit(): void {
 
     this.getUserDetails();
-    
+
   }
   isLoggedIn = true;
-  
-  getUserDetails(){
-    this.service.getUserDetails().subscribe(data=>{
-      this.userdetails=data;
+
+  getUserDetails() {
+    this.service.getUserDetails().subscribe(data => {
+      this.userdetails = data;
     })
   }
-  
-  
+
+
   //This deletes the user
   /*delete(id:any){
     this.service.deleteUserDetails(id).subscribe((y:any)=>{
@@ -41,18 +42,18 @@ export class AdminComponent implements OnInit{
       this.service.deleteUser(accountnumber).subscribe(
         (response) => {
           // console.log(response); // log the response to the console
-          alert('User deleted successfully!');
+          Swal.fire('Success', 'User deleted successfully!', 'success');
           this.getUserDetails();
         },
         (error) => {
           console.log(error); // log the error to the console
-          alert('Error deleting user!');
+          Swal.fire('Error', 'Error deleting user!', 'warning');
         }
       );
     }
   }
 
- 
+
 
 
   /*approved(c:any){
@@ -70,8 +71,8 @@ export class AdminComponent implements OnInit{
     this.service.postUserdetails(data).subscribe((x:any)=>{
       console.log("dfgh",x)
       
-    })
-  }*/
+    })
+  }*/
 
 
 

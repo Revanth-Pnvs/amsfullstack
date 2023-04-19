@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AdminDetails } from 'src/app/models/admindetails';
 import { CheckBalance } from 'src/app/models/checkbalance';
-import { AdmindetailserviceService } from 'src/app/services/admindetailservice.service';
 import { CheckbalanceserviceService } from 'src/app/services/checkbalanceservice.service';
 import Swal from 'sweetalert2';
 
@@ -25,7 +23,8 @@ constructor(private service:CheckbalanceserviceService , private router: Router)
     if (form.valid) {
       this.service.addCheckBalance(this.checkbalance).subscribe(data => {
       })
-      this.router.navigateByUrl('/transctions');
+      Swal.fire('Successfully','Your Account balance:50000', 'success');
+     // this.router.navigateByUrl('/transctions');
      
     }
     else {

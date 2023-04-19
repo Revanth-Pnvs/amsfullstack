@@ -69,7 +69,7 @@ public class UserController {
         }
     }
 		
-		//Jwt 
+		//Jwt
 	
 		@PostMapping("/login")
 		public ResponseEntity<?> login(@RequestBody User user, HttpSession session) {

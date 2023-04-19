@@ -36,13 +36,13 @@
     <div class="form-group ag">
       <label for="from-account">From Account:</label>
       <input #fromAccount="ngModel" [(ngModel)]="transferdetails.fromAccount" name="fromAccount" type="text"
-        class="form-control" id="from-account" name="fromAccount" placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
+        class="form-control" id="from-account" name="fromAccount" placeholder="Enter Account Number" pattern="[0-9]{10}" required>
     </div>
 
     <div class="form-group ag">
       <label for="to-account">To Account:</label>
       <input #toAccount="ngModel" [(ngModel)]="transferdetails.toAccount" type="text" class="form-control"
-        id="to-account" name="toAccount" placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
+        id="to-account" name="toAccount" placeholder="Enter Account Number" pattern="[0-9]{10}" required>
     </div>
     <!-- <div class="form-group">
       <label for="pin">Account Pin</label>

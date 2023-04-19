@@ -68,8 +68,7 @@ public class UserController {
             return new ResponseEntity<>("User object with account number " + accountnumber + " does not exist", HttpStatus.NOT_FOUND);
         }
     }
-		
-		//Jwt 
+	//Jwt
 	
 		@PostMapping("/login")
 		public ResponseEntity<?> login(@RequestBody User user, HttpSession session) {

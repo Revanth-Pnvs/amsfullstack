@@ -10,7 +10,7 @@ public class Transfer {
 	
 	private long fromAccount;
 	private long toAccount;
-	@Id 
+	@Id
 	private int pin;
 	private double amount;
 	

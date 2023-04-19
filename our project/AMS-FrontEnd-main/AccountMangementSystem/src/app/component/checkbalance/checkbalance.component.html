@@ -37,11 +37,11 @@
       <div class="form-group">
         <label for="accountNumber">Account Number</label>
         <input #accountNumber="ngModel" [(ngModel)]="checkbalance.accountNumber" name="accountNumber" type="text" class="form-control" id="accountNumber"
-          placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
+          placeholder="Enter your Account Number" pattern="[0-9]{10}" required>
       </div>
       <div class="form-group">
         <label for="pin">Account Pin</label>
-        <input #pin="ngModel" [(ngModel)]="checkbalance.pin" name="pin" type="text" class="form-control" id="pin" name="pin" placeholder="XXX-XXX" pattern="[0-9]{6}" required
+        <input #pin="ngModel" [(ngModel)]="checkbalance.pin" name="pin" type="password" class="form-control" id="pin" name="pin" placeholder="Enter your Pin" pattern="[0-9]{6}" required
           title="Enter your 6 digits pin">
       </div>
       <div class="text-center">

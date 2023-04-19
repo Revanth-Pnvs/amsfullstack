@@ -22,7 +22,7 @@ export class WithdrawComponent implements OnInit{
       this.service.addWithdrawDetails(this.withdrawdetails).subscribe(data=>{
 
       })
-      Swal.fire('Success', 'the amount has been withdrawn successfully', 'success');
+      Swal.fire('Success', 'the amount has been withdrawn successfully to your Wallet', 'success');
       this.router.navigateByUrl('/transctions');
     }
     else {

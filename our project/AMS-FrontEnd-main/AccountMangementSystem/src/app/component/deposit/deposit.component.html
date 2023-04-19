@@ -37,16 +37,16 @@
     <h3>Deposit Money</h3>
     <form class="body" #depositform="ngForm" (ngSubmit)="OnSubmit(depositform)" id="form">
       <div class="form-group ag">
-        <label for="from-account">From Account:</label>
-        <input #fromAccount="ngModel" [(ngModel)]="depositdetails.fromAccount" type="text" class="form-control" id="fromAccount" name="fromAccount" placeholder="XXXXX-XXXXX"
+        <label for="from-account">Account Number:</label>
+        <input #fromAccount="ngModel" [(ngModel)]="depositdetails.fromAccount" type="text" class="form-control" id="fromAccount" name="fromAccount" placeholder="Enter your Account Number"
            required title="Enter 10 digits Account Number" pattern="[0-9]{10}">
 
       </div>
-      <div class="form-group ag">
+      <!-- <div class="form-group ag">
         <label for="to-account">To Account:</label>
         <input #toAccount="ngModel" [(ngModel)]="depositdetails.toAccount" type="text" class="form-control" id="toAccount" name="toAccount" placeholder="XXXXX-XXXXX"
           required pattern="[0-9]{10}">
-      </div>
+      </div> -->
 
       <!-- <div class="form-group">
         <label for="accountNumber">Account Number</label>

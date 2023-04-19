@@ -1,4 +1,4 @@
-  package com.dxc.jpa.dao;
+package com.dxc.jpa.dao;
 
 import java.util.Optional;
 
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dxc.jpa.model.User;
 
 @Repository
-@Transactional 
+@Transactional
 
 public interface UserDao extends JpaRepository<User, String> {
 

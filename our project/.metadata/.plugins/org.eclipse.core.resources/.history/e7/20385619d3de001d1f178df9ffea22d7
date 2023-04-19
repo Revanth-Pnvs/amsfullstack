@@ -29,25 +29,17 @@ public class UserService {
 
 		return dao.findAll();
 	}
-
-	// delete user
-	public boolean deleteUser(String accountnumber) {
-		Optional<User> optionalUser = dao.findByAccountnumber(accountnumber);
-		if (optionalUser.isPresent()) {
-			dao.delete(optionalUser.get());
-			return true;
-		}
-		return false;
-	}
-
-	// JWT
-	public boolean validate(User user) {
-		Optional<User> optUser = dao.findByEmail(user.getEmail());
-		Optional<User> optPassword = dao.findByPassword(user.getPassword());
-		if (optUser.isPresent() && optPassword.isPresent()) {
-			return true;
-		}
-		return false;
-	}
-
+	
+	
+	//delete user
+		public boolean deleteUser(String accountnumber) {
+	        Optional<User> optionalUser = dao.findByAccountnumber(accountnumber);
+	        if (optionalUser.isPresent()) {
+	            dao.delete(optionalUser.get());
+	            return true;
+	        }
+	        return false;
+	    }
+	
+	
 }

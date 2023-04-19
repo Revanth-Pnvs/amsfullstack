@@ -1,6 +1,5 @@
 package com.dxc.jpa.controller;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dxc.jpa.model.User;
 import com.dxc.jpa.service.UserService;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import jakarta.servlet.http.HttpSession;
-
 @RestController
 @CrossOrigin(origins="http://localhost:4200/")
 public class UserController {
@@ -30,8 +25,6 @@ public class UserController {
 	UserService service;
 	ResponseEntity response;
 	boolean flag;
-	
-	String jwtToken; //Jwt
 	
 	@PostMapping("/addUser")
 	public ResponseEntity<?> addUser(@RequestBody User user){
@@ -68,40 +61,5 @@ public class UserController {
             return new ResponseEntity<>("User object with account number " + accountnumber + " does not exist", HttpStatus.NOT_FOUND);
         }
     }
-		
-		//Jwt 
-	
-		@PostMapping("/login")
-		public ResponseEntity<?> login(@RequestBody User user, HttpSession session) {
-			flag = service.validate(user);
-			if(flag) {
-				session.setAttribute("email",user.getEmail());
-				jwtToken = generateToken((user.getEmail()));
-				response = new ResponseEntity<String>(jwtToken,HttpStatus.OK);
-			}
-			else {
-				response = new ResponseEntity<String>("Failure ",HttpStatus.CONFLICT);
-			}
-			return response;
-		}
-		
-		@GetMapping("/logout")
-		public ResponseEntity<?> logout(HttpSession session) {
-			if((session!=null) && (session.getAttribute("email") != null)) {
-				session.invalidate();
-				response = new ResponseEntity<String>("Logout Successfully!", HttpStatus.OK);
-			}
-			else {
-				response = new ResponseEntity<String>("Failure ",HttpStatus.CONFLICT);
-			}
-			return response;
-		}
-		
-		public String generateToken(String email) {
-			String token = Jwts.builder().setSubject(email).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis()+200000))
-					.signWith(SignatureAlgorithm.HS256, "secretKey").compact();
-			System.out.println("Token: "+token);
-			return token;
-		}
 
 }
