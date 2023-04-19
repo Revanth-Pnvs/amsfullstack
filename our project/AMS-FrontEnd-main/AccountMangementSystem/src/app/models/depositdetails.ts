@@ -3,4 +3,7 @@ export class DepositDetails{
     public pin:any;
     public amount:any;
 
+    public fromAccount:any;
+    public toAccount:any;
+
 }

@@ -5,6 +5,7 @@ import { AdminDetails } from 'src/app/models/admindetails';
 import { CheckBalance } from 'src/app/models/checkbalance';
 import { AdmindetailserviceService } from 'src/app/services/admindetailservice.service';
 import { CheckbalanceserviceService } from 'src/app/services/checkbalanceservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-checkbalance',
@@ -24,9 +25,11 @@ constructor(private service:CheckbalanceserviceService , private router: Router)
     if (form.valid) {
       this.service.addCheckBalance(this.checkbalance).subscribe(data => {
       })
-      alert('Your Account Balance is $45000');
-    } else {
-      alert('Enter valid data');
+      this.router.navigateByUrl('/transctions');
+     
+    }
+    else {
+      Swal.fire('Error', 'Invalid data', 'warning');
     }
 
   }

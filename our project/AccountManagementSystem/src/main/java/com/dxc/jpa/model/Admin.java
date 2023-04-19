@@ -8,15 +8,16 @@ import jakarta.persistence.Table;
 @Table(name = "admin")
 
 public class Admin {
-	
+
 	private String userName;
+
 	@Id
 	private String email;
 	private long phone;
 	private String password;
-	
+
 	public Admin() {
-		
+
 	}
 
 	public Admin(String userName, String email, long phone, String password) {
@@ -63,5 +64,5 @@ public class Admin {
 	public String toString() {
 		return "Admin [userName=" + userName + ", email=" + email + ", phone=" + phone + ", password=" + password + "]";
 	}
-	
+
 }

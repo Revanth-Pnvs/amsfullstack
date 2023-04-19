@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './component/user-login/user-login.component';
 import { AdminLoginComponent } from './component/admin-login/admin-login.component';
@@ -14,6 +14,8 @@ import { UserregisterComponent } from './component/userregister/userregister.com
 import { TransctionsComponent } from './component/transctions/transctions.component';
 import { AdminregisterComponent } from './component/adminregister/adminregister.component';
 import { CustomerdetailsComponent } from './component/customerdetails/customerdetails.component';
+import { combineLatest } from 'rxjs';
+import { CustomerrequestComponent } from './component/customerrequest/customerrequest.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,8 @@ const routes: Routes = [
   { path: 'userregister',component:UserregisterComponent},
   { path: 'transctions', component:TransctionsComponent},
   {path:'adminregister',component:AdminregisterComponent},
-  {path:'customerdetails',component:CustomerdetailsComponent}
+  {path:'customerdetails',component:CustomerdetailsComponent},
+ {path:'customerrequest',component:CustomerrequestComponent}
 ];
 
 @NgModule({

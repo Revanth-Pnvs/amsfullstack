@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Account Mangement System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--<li class="nav-item">
+                <a class="nav-link" routerLink="/" style="color: white;">Home</a>
+            </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#" style="color: white; font-weight: 600;">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/transctions" style="color: white; font-weight: 600;">My
+                        Transactions</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin" style="color: white; font-weight: 600;">My Details</a>
+                  </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customerrequest" style="color: white; font-weight: 600;">Other
+                        Services</a>
+                </li>
+            </ul>
+
+            <span>
+
+            </span>
+            <span>
+                <a class="nav-link" routerLink="/" style="color: white;">Logout <i
+                        class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i></a>
+            </span>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 text-center">
+
+    <div class="col-md-3 col-sm-6">
+       
+    </div>
+    <form>
+        <div class="col-md-3 col-sm-6">
+            <div class="card" style="width:20rem">
+                <img class="card-img-top" src="./assets/images/cheque.jpg" alt="Card image cap" height="300"
+                    width="100">
+                <div class="card-body">
+                    <h5 class="card-title">Request Cheque book</h5>
+                    <p class="card-text"></p>
+
+                   <button class="btn btn-success" (click)="onSubmit()">Request Cheque book</button>
+                </div>
+            </div>
+        </div>
+    </form>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+
+   
+        <div class="col-md-3 col-sm-6">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="./assets/images/credit.jpg" alt="Card image cap" height="300"
+                    width="100">
+                <div class="card-body">
+                    <h5 class="card-title">Request Credit Card</h5>
+                    <p class="card-text"></p>
+                  <button class="btn btn-success" (click)="onclick()">Request Credit Card</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+           
+        </div>
+   
+</div>
+
+
+
+
+
+
+<footer>Account Mangement System &copy; 2023</footer>

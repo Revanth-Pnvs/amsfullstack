@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { WithdrawDetails } from 'src/app/models/withdrawdetails';
 import { WithdrawdetailserviceService } from 'src/app/services/withdrawdetailservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-withdraw',
@@ -21,10 +22,11 @@ export class WithdrawComponent implements OnInit{
       this.service.addWithdrawDetails(this.withdrawdetails).subscribe(data=>{
 
       })
-      alert('Withdraw Successfull');
+      Swal.fire('Success', 'the amount has been withdrawn successfully', 'success');
+      this.router.navigateByUrl('/transctions');
     }
-    else{
-      alert('Withdraw Failed');
+    else {
+      Swal.fire('Error', 'Withdraw Failed', 'warning');
     }
 
   }

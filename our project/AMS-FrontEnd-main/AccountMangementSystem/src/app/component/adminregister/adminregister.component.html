@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">A M S</a>
+        <a class="navbar-brand" href="#">Account Mangement System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,25 +39,29 @@
                 </div>
                 <form id="adminform" #adminform="ngForm" (ngSubmit)="onSubmit(adminform)">
 
-                    <div class= "form-group mb-2">
-                        
-                        <input #userName="ngModel" [(ngModel)]="admindetails.userName" name="userName" type="text" class="form-control" id="userName" name="userName" placeholder="User Name"
-                            required pattern="[A-Za-z]{3,10}[0-9]{3}" title="minimum 3 to 8 characters and 3 digits">
+                    <div class="form-group mb-2">
+
+                        <input #userName="ngModel" [(ngModel)]="admindetails.userName" name="userName" type="text"
+                            class="form-control" id="userName" name="userName" placeholder="User Name" required
+                            pattern="[A-Za-z]{3,10}[0-9]{3}" title="minimum 3 to 8 characters and 3 digits">
                     </div>
                     <div class="form-group mb-2">
-                        
-                        <input #email="ngModel" [(ngModel)]="admindetails.email" name="email" type="email" class="form-control" id="email" name="email" placeholder="Email-address"
-                            maxlength="20" required>
+
+                        <input #email="ngModel" [(ngModel)]="admindetails.email" name="email" type="email"
+                            class="form-control" id="email" name="email" placeholder="Email-address" maxlength="20"
+                            required>
                     </div>
                     <div class="form-group mb-2">
-                      
-                        <input #phone="ngModel" [(ngModel)]="admindetails.phone" name="phone" type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required
+
+                        <input #phone="ngModel" [(ngModel)]="admindetails.phone" name="phone" type="tel"
+                            class="form-control" id="phone" name="phone" placeholder="Phone" required
                             pattern="[7-9][0-9]{9}">
                     </div>
                     <div class="form-group mb-2">
-                      
-                        <input #password="ngModel" [(ngModel)]="admindetails.password" name="password" type="password" class="form-control" id="password" name="password" placeholder="Password"
-                            required>
+
+                        <input #password="ngModel" [(ngModel)]="admindetails.password" name="password" type="password"
+                            class="form-control" id="password" name="password" placeholder="Password" required
+                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*\d)[A-Za-z\d!@#$%^&*]{6,15}$">
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="formCheck">
@@ -80,5 +84,4 @@
     </div>
 </div>
 
-<footer>Account Mangement System  &copy; 2023</footer>
-
+<footer>Account Mangement System &copy; 2023</footer>

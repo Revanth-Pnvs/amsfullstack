@@ -1,18 +1,59 @@
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3" *ngFor= "let c customerdetails ">
-            <div class="card">
-                <div class="card-body">
-                  <span class="text-danger float-end" (click)= "onDelete(c.id)"><i class="fa-solid fa-trash-alt fa-lag"></i></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Account Mangement System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" style="color: white; font-weight: 600;">Home</a>
+        </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/transctions" style="color: white; font-weight: 600;">My Transctions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/customerdetails" style="color: white; font-weight: 600;">My Details</a>
+          </li>
+      </ul>
+      <span>
+         
+      </span>
+      <span>
+          <a routerLink="/" style="color: white;"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let c of customerdetails">
+      <div class="card" style="background-color: rgb(231, 109, 109);">
+
+        <div class="card-body">
+          <span class="text-danger float-end" (click)= "onDelete(c.id)"><i class="fa-solid fa-trash-alt fa-lag"></i></span>
                   <h5 class="card-title">{{c.firstname}} {{c.lastname}}</h5>
                   <p class="card-text">{{c.email}}</p>
                   <p class="card-text">{{c.phone}}</p>
                   <p class="card-text">{{c.dob}}</p>
                   <p class="card-text">{{c.gender}}</p>
                   <p class="card-text">{{c.address}}</p>
-                </div>
-              </div>
+
+          <a class="btn btn-success" style="margin-right: 5px" (click)="updateCustomer()">Update</a>
+          <a class="btn btn-danger" (click)="DeleteCustomer()">Delete</a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+</div> -->
+
+<footer>Account Mangement System  &copy; 2023</footer>
+
+  
+    
+

@@ -10,7 +10,7 @@ import { WithdrawdetailserviceService } from 'src/app/services/withdrawdetailser
 })
 export class TransctionsComponent implements OnInit{
  
-  
+  today: number = Date.now();
   constructor(
     private service:TransferdetailserviceService,
     private withdrawService: WithdrawdetailserviceService,
@@ -51,8 +51,7 @@ export class TransctionsComponent implements OnInit{
     })
   }
 
-  
-
-  
-
+  printPage() {
+    window.print();
+  }
 }

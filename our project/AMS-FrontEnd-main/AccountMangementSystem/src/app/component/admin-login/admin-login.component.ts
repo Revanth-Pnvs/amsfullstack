@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDetails } from 'src/app/models/userdetails';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-admin-login',
@@ -23,7 +24,7 @@ export class AdminLoginComponent implements OnInit {
      
     }
     else{
-      alert('Invalid Credentials');
+      Swal.fire('Error','Invalid Credentials','error');
     }
   }
 

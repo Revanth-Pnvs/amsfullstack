@@ -9,9 +9,6 @@ import { UserdetailserviceService } from 'src/app/services/userdetailservice.ser
 })
 export class AdminComponent implements OnInit{
 
-
-  
-
   constructor(private service:UserdetailserviceService){
     
   }

@@ -89,3 +89,12 @@ footer{
     bottom: 0;
     position: fixed;
   }
+
+  .form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+  
+  .form-control.ng-touched.ng-valid{
+  
+    border: 2px solid green;
+  }

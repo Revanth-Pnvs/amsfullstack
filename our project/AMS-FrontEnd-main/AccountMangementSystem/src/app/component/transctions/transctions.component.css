@@ -23,7 +23,7 @@ footer{
   }
   .scrollable-section {
     margin-top: 80px;
-    height: 2000px; /* set the height of the section */
+    height: 1000px; /* set the height of the section */
     overflow-y: scroll; /* add vertical scrollbar */
   }
   

@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TransctionsComponent } from './component/transctions/transctions.component';
 import { AdminregisterComponent } from './component/adminregister/adminregister.component';
 import { CustomerdetailsComponent } from './component/customerdetails/customerdetails.component';
+import { CustomerrequestComponent } from './component/customerrequest/customerrequest.component';
 
 
 
@@ -51,6 +52,7 @@ import { CustomerdetailsComponent } from './component/customerdetails/customerde
     TransctionsComponent,
     AdminregisterComponent,
     CustomerdetailsComponent,
+    CustomerrequestComponent,
    
   ],
   imports: [

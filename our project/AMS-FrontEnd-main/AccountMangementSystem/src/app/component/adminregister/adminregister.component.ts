@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminDetails } from 'src/app/models/admindetails';
 import { AdmindetailserviceService } from 'src/app/services/admindetailservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-adminregister',
@@ -16,19 +17,16 @@ export class AdminregisterComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   }
   onSubmit(form: NgForm) {
     if (form.valid) {
       this.service.addAdminDetails(this.admindetails).subscribe(data => {
       })
-      alert('Admin Registered');
+      Swal.fire('Success', 'Admin Created Successfully', 'success');
+      this.router.navigateByUrl('/admin-login');
     } else {
-      alert('not Registered');
+
+      Swal.fire('Error', 'Invalid Data', 'warning');
     }
-
   }
-
-
 }

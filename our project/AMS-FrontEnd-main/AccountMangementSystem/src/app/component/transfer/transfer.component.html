@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">A M S</a>
+    <a class="navbar-brand" href="#">Account Mangement System</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,16 +44,16 @@
       <input #toAccount="ngModel" [(ngModel)]="transferdetails.toAccount" type="text" class="form-control"
         id="to-account" name="toAccount" placeholder="XXXXX-XXXXX" pattern="[0-9]{10}" required>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="pin">Account Pin</label>
       <input #pin="ngModel" [(ngModel)]="transferdetails.pin" type="text" class="form-control" id="pin" name="pin"
         placeholder="XXX-XXX" required title="Enter your 6 digits pin" pattern="[0-9]{6}">
-    </div>
+    </div> -->
     <div class="form-group ag">
       <label for="amount">Amount:</label>
       <input #amount="ngModel" [(ngModel)]="transferdetails.amount" type="text" class="form-control" id="amount"
         name="amount" placeholder="Enter Amount to be transfer" title="Amount should be less than or equal to 99999"
-        required pattern="[0-9]{5}">
+        required pattern="[0-9]{0,5}">
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary">Transfer Money</button>
